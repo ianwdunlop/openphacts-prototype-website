@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Open PHACTS Discovery Platform</title>
+
+    <!-- Bootstrap -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div style="border-bottom: 1px solid lightgray; margin-bottom: 20px; padding-bottom: 5px; padding-top: 5px;">
+        <div class="container">
+            <div class="row">
+                <a href="#">
+                    <img src="./images/ops_logo_with_text.png" class="responsive-image" alt="Logo" />
+                </a>
+                <span style="margin-left: 10px;">
+                    <ul class="nav nav-pills" style="display: inline-block; vertical-align: middle;" role="tablist">
+                        <li role="presentation" class="active"><a href="#about" role="tab" data-toggle="tab">About</a>
+                        </li>
+                        <li role="presentation"><a href="#scientists" role="tab" data-toggle="tab">For Scientists</a>
+                        </li>
+                        <li role="presentation"><a href="#developers" role="tab" data-toggle="tab">For Developers</a>
+                        </li>
+                        <li role="presentation"><a href="#foundation" role="tab" data-toggle="tab">The Foundation</a>
+                        </li>
+                    </ul>
+                </span>
+
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div>
+                <!-- Navigation -->
+                <!-- <div>
+                    <ul class="nav nav-pills" style="margin-bottom: 20px;" role="tablist">
+                        <li role="presentation" class="active"><a href="#about" role="tab" data-toggle="tab">About</a>
+                        </li>
+                        <li role="presentation"><a href="#scientists" role="tab" data-toggle="tab">For Scientists</a>
+                        </li>
+                        <li role="presentation"><a href="#developers" role="tab" data-toggle="tab">For Developers</a>
+                        </li>
+                        <li role="presentation"><a href="#foundation" role="tab" data-toggle="tab">The Foundation</a>
+                        </li>
+                    </ul>
+	    </div> -->
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="about">
+                        <p class="lead">The <strong><a href="https://dev.openphacts.org/">Open PHACTS Discovery Platform</a></strong> has been developed to reduce barriers to drug discovery in industry, academia and for small businesses.</p>
+                        <ul>
+                            <li>
+                                <p>It contains all the data sources you <strong>already use</strong>, <strong>integrated</strong> and <strong>linked</strong> together so that you can easily see the relationships between <em>compounds</em>, <em>targets</em>, <em>pathways</em>, <em>diseases</em> and <em>tissues</em>.</p>
+                            </li>
+                            <li>
+                                <p>The platform has been used to answer difficult questions in drug discovery and results have been published in peer reviewed scientific journals.</p>
+                            </li>
+                            <li>
+                                <p>The platform was built in collaboration with major academic and commercial organizations involved in drug discovery such as <a href="astrazenecamolndal.com/">Astra Zeneca</a>, <a href="https://www.ebi.ac.uk/">The European Bioinformatics Institute</a>,
+                                    <a href="www.univie.ac.at/">University of Vienna</a>,
+                                    <a href="http://www.vu.nl/">VU University of Amsterdam</a> and <a href="http://www.manchester.ac.uk/">The University of Manchester</a>.
+                            </li>
+                            <li>
+                                <p>The platform is founded on <a href="http://en.wikipedia.org/wiki/Semantic_Web">semantic web</a> and <a href="http://en.wikipedia.org/wiki/Linked_data">linked data</a> principles and uses industrial strength tools such as
+                                    <a href="virtuoso.openlinksw.com/">Virtuoso</a> to provide fast and robust access to the chemistry and biological data sources that you trust.</p>
+                            </li>
+
+                            <li>
+                                <p>You can access the data via the <a href="https://dev.openphacts.org/docs/1.4">Open PHACTS API</a> or explore it using the <a href="https://explorer2.openphacts.org">Open PHACTS Explorer</a> and many other apps developed using
+                                    the API.
+                                </p>
+                            </li>
+                            <li>
+                                <p>The data within the platform is available in a variety of formats to suit the applications you already use. Formats include <em>JSON</em>, <em>XML</em>, <em>TSV</em> and <em>RDF</em>.</p>
+                            </li>
+
+                        </ul>
+                        <div style="margin-top:20px;">
+                            <div class="panel panel-info">
+                                <!-- Default panel contents -->
+                                <div class="panel-heading">What data?</div>
+                                <div class="panel-body">
+                                    <p>Data sources include <a href="http://www.drugbank.ca/">Drug Bank</a>, <a href="http://www.ebi.ac.uk/chebi">ChEBI<a>, <a href="http://www.ebi.ac.uk/chembldb">ChEMBL</a>, <a href="http://www.chemspider.com/">ChemSpider</a>,
+                                        <a href="http://www.uniprot.org/">Uniprot</a>, <a href="http://www.wikipathways.org/">WikiPathways</a>, <a href="http://www.disgenet.org">DisGeNET</a>, <a href="http://www.nextprot.org">neXtProt</a> and <a href="http://geneontology.org/">Gene Ontology</a>.</p>
+                                    <p>As of <span id="todays-date"></span>, the <strong>Open PHACTS Discovery Platform</strong> contained the following:</p>
+                                </div>
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>Type</th>
+                                            <th>Count</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Compounds</td>
+                                            <td>3,000,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Targets</td>
+                                            <td>2,500,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Diseases</td>
+                                            <td>74,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Pathways</td>
+                                            <td>92,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Tissues</td>
+                                            <td>150,000</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- for Scientists -->
+                    <div role="tabpanel" class="tab-pane" id="scientists">
+
+                        <p class="lead">The Open PHACTS Discovery Platform was built for science. Using all the data sets that you already use but integrating and linking them together allows you to build better analysis pipelines.</p>
+                        <div class="panel panel-info">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">What do you mean by linking?</h3>
+                            </div>
+                            <div class="panel-body">
+                                Every data provider has a different identifier for the same thing and each entity (compound, target pathway etc) in the plaform has one or more of these identifiers or URIs. For example, for Sorafenib the DrugBank identifier is http://www.drugbank.ca/drugs/DB00398,
+                                the ChemSpider identifier is http://www.chemspider.com/187440 and the Bio2RDF one is http://bio2rdf.org/drugbank:DB00398. In fact Sorafenib has over <a href="https://beta.openphacts.org/1.4/mapUri?app_id=1c22cbe7&app_key=167a3a3d8539b5d85280e7178f4e62ab&Uri=http%3A%2F%2Fwww.conceptwiki.org%2Fconcept%2F38932552-111f-4a4e-a46a-4ed1d7bdf9d5&_format=json">30</a> of
+                                these URIs. Each data provider also provides a little bit of the puzzle about what properties an entity has. By linking these identifers together the Open PHACTS Discovery Platform gives you the complete data picture and
+                                not that which is specific to one provider. All the provenance about where each property comes from is provided so that you can always go back to the source. For example, for a compound the data can come from DrugBank,
+                                ChEMBL, Chemspider and ConceptWiki.
+                            </div>
+                        </div>
+                        <p id="use-cases">Many drug discovery use cases were used to drive the development of the platform and these are now available as <a href="http://www.myexperiment.org/groups/1125/content">workflows</a> which can be re-used and repurposed to answer
+                            your scientifc questions. Examples include:</p>
+                        <ul>
+                            <li>
+                                <p>For a given compound, give me the interaction profile with targets</p>
+                            </li>
+                            <li>
+                                <p>Give me all oxidoreductase inhibitors active &lt;100 nM in human and mouse</p>
+                            </li>
+
+                            <li>
+                                <p>For a target, give me all active compounds with the relevant assay data. For this target which active compounds have been reported in the literature?</p>
+                            </li>
+                        </ul>
+                        <p>The Open PHACTS data can be browsed just like any web page. After <a href="https://dev.openphacts.org/signup">creating</a> your application key and id you can use the <a href="https://dev.openphacts.org/docs/1.4">interface</a> to find
+                            compounds, targets, pathways and more. The API pages show you the actual request that you made and these can be can then be opened in a browser just like any web page. <a href="https://beta.openphacts.org/1.4/compound?uri=http%3A%2F%2Fdrugbank.ca%2Fdrugs%2FDB00398&app_id=1c22cbe7&app_key=167a3a3d8539b5d85280e7178f4e62ab&_format=json">Click here</a> to
+                            request information on Sorafenib using its <a href="http://drugbank.ca/drugs/DB00398">DrugBank</a> identifier.</p>
+                        <p>Browse the hierarchies for <a href="https://beta.openphacts.org/1.4/tree?app_id=1c22cbe7&app_key=167a3a3d8539b5d85280e7178f4e62ab&root=enzyme&_format=json">Enzyme</a>, <a href="https://beta.openphacts.org/1.4/tree?app_id=1c22cbe7&app_key=167a3a3d8539b5d85280e7178f4e62ab&root=go&_format=json">GO</a>,
+                            <a href="https://beta.openphacts.org/1.4/tree?app_id=1c22cbe7&app_key=167a3a3d8539b5d85280e7178f4e62ab&root=chebi&_format=json">ChEBI</a>and <a href="https://beta.openphacts.org/1.4/tree?app_id=1c22cbe7&app_key=167a3a3d8539b5d85280e7178f4e62ab&root=chembl&_format=json">ChEMBL</a> and
+                            navigate to <a href="https://beta.openphacts.org/1.4/target/pharmacology/pages?uri=http%3A%2F%2Fwww.conceptwiki.org%2Fconcept%2F00059958-a045-4581-9dc5-e5a08bb0c291&app_id=1c22cbe7&app_key=167a3a3d8539b5d85280e7178f4e62ab&_format=json">pharmacological data</a> to
+                            discover the <strong><em>compounds</em></strong> and <strong><em>targets</em></strong> that have an effect on your science. You can also browse these hierarchies using the <a href="http://explorer2.openphacts.org/trees?ontology=enzyme">Explorer</a>.</p>
+                        <p>Download the data in a format which suits the way you work. Grab some data in <em>JSON</em> for <strong>Knime</strong>, <em>XML</em> for <strong>Java</strong> or <em>TSV</em> for <strong>Excel</strong>.</p>
+                        <p>Use one of the many existing workflows and repurpose to suit your scientific needs. Open PHACTS provides <a href="https://github.com/openphacts/OPS-Knime">components</a> for the Knime workflow system which are free to download and
+                            use.
+                        </p>
+                        <div id="workflow-carousel" class="carousel slide" style="width: 450px; margin: auto; margin-top:20px; mrgin-bottom: 20px;" data-ride="carousel">
+                            <h3 style="background-color: lightgray; margin-bottom:10px; text-align: center;">Sample workflows which use the Open PHACTS Discovery Platform</h3>
+                            <!-- Wrapper for slides -->
+                            <div class="carousel-inner" role="listbox">
+                                <div class="item active">
+                                    <a href="http://www.myexperiment.org/workflows/4509.html">
+                                        <img src="./images/knime1.png" alt="Workflow to find interaction profile for compound">
+                                    </a>
+                                    <p style="text-align: center; background-color: lightgray;">For a given compound, give me the interaction profile with targets</p>
+                                </div>
+                                <div class="item">
+                                    <a href="http://www.myexperiment.org/workflows/4504.html">
+                                        <img src="./images/knime2.png" alt="Workflow to find oxidreductase inhibitors">
+                                    </a>
+                                    <p style="text-align: center; background-color: lightgray;">All oxidoreductase inhibitors active &lt; 100 nM in human and mouse</p>
+                                </div>
+                                <div class="item">
+                                    <a href="http://www.myexperiment.org/workflows/4512.html">
+                                        <img src="./images/knime3.png" alt="Workflow to find chemical series active against target">
+                                    </a>
+                                    <p style="text-align: center; background-color: lightgray;">Chemical series active against target X and associated with disease Y</p>
+                                </div>
+
+                            </div>
+
+                            <!-- Controls -->
+                            <a class="left carousel-control" href="#workflow-carousel" role="button" data-slide="prev">
+                                <span class="glyphicon glyphicon-chevron-left"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="right carousel-control" href="#workflow-carousel" role="button" data-slide="next">
+                                <span class="glyphicon glyphicon-chevron-right"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+
+
+                        </div>
+
+                    </div>
+
+                    <!-- For Developers -->
+                    <div role="tabpanel" class="tab-pane" id="developers">
+                        <p class="lead">Many applications have already been developed using the Open PHACTS Discovery Platform's API. The API allows the developer to use any programming language and standard HTTP calls to fetch information about any of the entities within
+                            the platform. Libraries are already available in various languages to give developers a helping hand when developing applications.</p>
+                        <p>Just like the web, the API uses HTTP. Each API request uses HTTP Get with the path to the response required and a set of parameters. Each API call requires at least your API key and application identifier with most also requiring
+                            the URI of the entity of interest.</p>
+                        <p>In the example below the developer is calling the 1.4 API to return information about the <code>compound</code> represented by the URI <code>http://www.conceptwiki.org/concept/38932552-111f-4a4e-a46a-4ed1d7bdf9d5</code>. The response
+                            is requested to be in JSON denoted by the <code>_format=json</code> parameter. The request also contains the developer's <code>app_key</code> and <code>app_id</code>.</p>
+                        <div class="panel panel-info">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Example API call to return Compound Info</h3>
+                            </div>
+                            <div class="panel-body">
+                                <code>https://beta.openphacts.org/1.4/compound?uri=http%3A%2F%2Fwww.conceptwiki.org%2Fconcept%2F38932552-111f-4a4e-a46a-4ed1d7bdf9d5&app_id=1c22cbe7&app_key=167a3a3d8539b5d85280e7178f4e62ab&_format=json</code> 
+                            </div>
+                        </div>
+                        <ul>
+                            <li>
+                                <p><a href="https://github.com/openphacts/ops.js">OPS.js</a> is a JavaScript library containing methods to call the Open PHACTS API and parse the responses into simple JSON objects. The library has been used extensively in
+                                    the <a href="https://explorer2.openphacts.org">Explorer</a> and example uses can be found in the <a href="http://openphacts.github.io/ops.js/">documentation</a> as well as in the Explorer <a href="https://github.com/openphacts/explorer2">source code</a>.</p>
+                            </li>
+                            <li>
+                                <p>The <a href="https://github.com/openphacts/ops_gems">ops_gems</a> library provides API access via Ruby and is used in the <a href="http://chembionavigator.org">ChemBio Navigator</a> application</a>.</p>
+                            </li>
+
+                        </ul>
+                        <p>The API is documented using Swagger and there are many third party libraries for <a href="https://github.com/swagger-api/swagger-spec">automatically</a> generating code to access the API.</p>
+                        <p>The source code for many applications can be found in <a href="https://www.github.com/openphacts/">GitHub</a>. The source code underlying the <a href="https://github.com/openphacts/ops-platform-setup">platform</a> and the <a href="https://github.com/openphacts/OPS_LinkedDataApi">API</a> is
+                            also freely available.</p>
+
+                        <div id="app-carousel" class="carousel slide" style="width: 500px; margin: auto; margin-top:20px;" data-ride="carousel">
+                            <h3 style="background-color: lightgray; margin-bottom:10px; text-align: center;">Applications built using the Open PHACTS Discovery Platform</h3>
+
+                            <!-- Wrapper for slides -->
+                            <div class="carousel-inner" role="listbox">
+                                <div class="item">
+                                    <a href="https://dev.openphacts.org/">
+                                        <img src="./images/api_screenshot2.png" alt="Open PHACTS API" />
+                                    </a>
+                                    <p style="text-align: center; background-color: lightgray;">Open PHACTS API</p>
+                                </div>
+                                <div class="item active">
+                                    <a href="http://utopiadocs.com/">
+                                        <img src="./images/utopia_screenshot2.png" alt="Utopia Documents" />
+                                    </a>
+                                    <p style="text-align: center; background-color: lightgray;">Utopia Documents</p>
+                                </div>
+                                <div class="item">
+                                    <a href="http://chembionavigator.org/">
+                                        <img src="./images/cbn_screenshot2.png" alt="Chem Bio Navigator" />
+                                    </a>
+                                    <p style="text-align: center; background-color: lightgray;">ChemBio Navigator</p>
+                                </div>
+                                <div class="item">
+                                    <a href="http://potentia.cbs.dtu.dk/services/garfield/">
+                                        <img src="./images/garfield_screenshot2.png" alt="GARField" />
+                                    </a>
+                                    <p style="text-align: center; background-color: lightgray;">GARField</p>
+                                </div>
+                                <div class="item">
+                                    <a href="http://phi.imim.es/collector">
+                                        <img src="./images/collector_screenshot2.png" alt="Collector" />
+                                    </a>
+                                    <p style="text-align: center; background-color: lightgray;">Collector</p>
+                                </div>
+                                <div class="item">
+                                    <a href="http://pharmatrek.org/">
+                                        <img src="./images/pharma_trek_screenshot2.png" alt="PharmaTrek" />
+                                    </a>
+                                    <p style="text-align: center; background-color: lightgray;">PharmaTrek</p>
+                                </div>
+                                <div class="item">
+                                    <a href="https://explorer2.openphacts.org/">
+                                        <img src="./images/explorer2_screenshot.png" alt="Explorer" />
+                                    </a>
+                                    <p style="text-align: center; background-color: lightgray;">Open PHACTS Explorer</p>
+                                </div>
+
+                            </div>
+
+                            <!-- Controls -->
+                            <a class="left carousel-control" href="#app-carousel" role="button" data-slide="prev">
+                                <span class="glyphicon glyphicon-chevron-left"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="right carousel-control" href="#app-carousel" role="button" data-slide="next">
+                                <span class="glyphicon glyphicon-chevron-right"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+
+
+                        </div>
+
+                    </div>
+
+                    <div role="tabpanel" class="tab-pane" id="foundation">
+                        <p class="lead">The Open PHACTS Foundation is a not-for-profit membership organisation, supporting the Open PHACTS Discovery Platform: A sustainable, open, vibrant and interoperable information infrastructure for applied life science research
+                            and development.
+                        </p>
+                        <div class="panel panel-info">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">The Open PHACTS API will always be free</h3>
+                            </div>
+                            <div class="panel-body">
+                                The Open PHACTS API is freely available for individuals and companies (up to 5 developer accounts), as described in the Open PHACTS Foundation’s core business values. Become a member if you wish to help direct the development and strategy of the Open
+                                PHACTS Foundation. For heavy users of the API, and for those who require enhanced support / security Premium API subscription packages are available.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        var d = new Date(Date.now());
+        var dateString = d.toLocaleDateString();
+        $('#todays-date').html(dateString);
+    </script>
+</body>
+
+</html>
